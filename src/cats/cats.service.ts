@@ -23,7 +23,7 @@ export class CatsService {
   }
 
   update(id: number, updateCatDto: UpdateCatDto) {
-    return `This action updates a #${id} cat`;
+    return this.catModel.findByIdAndUpdate(id, updateCatDto)
   }
 
   remove(id: number) {
